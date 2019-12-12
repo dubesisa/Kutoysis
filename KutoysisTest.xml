@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Automation Assessment" parallel="tests" thread-count="1" verbose="1">
+    <listeners>
+        <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
+    </listeners>
+    <test name="Assessment test">
+        <parameter name="excelData" value="TestController.xlsx"/>
+        <parameter name="appURL" value="https://am.jpmorgan.com/gb/en/asset-management/gim/adv/home"/>
+        <classes>
+            <class name="Test.KutoysisBasePageTest"/>
+        </classes>
+    </test>
+</suite>
